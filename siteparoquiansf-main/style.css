@@ -1,0 +1,1310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+header {
+  width: 100%;
+}
+
+i {
+  color: #fff;
+}
+
+.header-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.header-icons a:hover i {
+  animation: translateY 0.8s infinite alternate;
+  color: #d34040;
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(8px) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.header-button {
+  border: 1px solid #fff;
+  padding: 8px 24px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: transparent;
+  transition: background-color 0.8s;
+}
+
+.header-button:hover {
+  border: 1px solid #d34040;
+  background-color: #d34040;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+.header-logo img {
+  width: 200px;
+  margin-top: 70px;
+}
+.header-logo p {
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  text-align: center;
+  margin: 10px 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 44px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-content i {
+    margin-top: 16px;
+    font-size: 34px;
+  }
+  .header-logo img {
+    width: 160px;
+    margin-top: 46px;
+  }
+  .header-button {
+    display: none;
+  }
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+#logo img {
+  width: 45px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+#nav.scrolled {
+  background: #06121e;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a,
+#menu li {
+  display: block;
+  padding: 0.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+#menu a:hover,
+#menu li .fab:hover,
+#menu li .fa-youtube:hover {
+  color: #d34040;
+}
+
+#btn-mobile {
+  display: none;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 80%;
+    top: 70px;
+    right: 0px;
+    background: #06121e;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+.bg-home {
+  position: relative;
+}
+
+.bg-home::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("assets/img-fundo.jpg");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 70%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 0.3;
+}
+
+.hero {
+  color: #fff;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  margin-top: -125px;
+}
+.hero h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 940px;
+  font-size: 46px;
+}
+.hero p {
+  text-align: center;
+  margin: 14px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: 34px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+}
+.about {
+  background-color: #06121e;
+  overflow: hidden;
+  color: #fff;
+  margin-top: -150px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 34px 14px 64px 14px;
+}
+.about-content img {
+  max-width: 570px;
+}
+
+.about-content div {
+  flex: 1;
+}
+
+.about-description h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+.about-description p {
+  margin-bottom: 24px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+.banner {
+  background-color: #fff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.banner-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.banner-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.banner-site {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  padding: 0 44px 34px 44px;
+}
+
+.banner-imagem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .desktop-image {
+    display: none;
+  }
+  .mobile-image {
+    display: block;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .desktop-image {
+    display: block;
+  }
+  .mobile-image {
+    display: none;
+  }
+}
+.horario {
+  background-color: #fff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.horario-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.horario-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.horariosgeral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  padding: 0 44px 34px 44px;
+}
+
+.horarios-imagem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.horarios-imagem img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.25s;
+}
+
+.horarios-imagem img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.horarios-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+  flex-direction: column;
+}
+
+.horarios-info button {
+  color: #232224;
+  background-color: #00BFFF;
+  padding: 14px 28px;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+  border-radius: 25px;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .horariosgeral {
+    flex-direction: column;
+  }
+  .horariosgeral img {
+    max-width: 740px;
+  }
+}
+.liturgico {
+  background-color: #fff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.liturgico-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.liturgico-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.liturgia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  padding: 0 44px 34px 44px;
+}
+
+.liturgia-imagem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.liturgia-imagem img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.25s;
+}
+
+.liturgia-imagem img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.liturgia-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+  flex-direction: column;
+}
+
+.liturgia-info button {
+  color: #232224;
+  background-color: #fff;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: 1000;
+  margin: 14px 0;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .liturgia {
+    flex-direction: column;
+  }
+  .liturgia img {
+    max-width: 740px;
+  }
+}
+.midia {
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.midia-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.midia-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  padding: 0 44px 34px 44px;
+}
+
+.social-imagem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.social-imagem img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.25s;
+}
+
+.social-imagem img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.social-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+  flex-direction: column;
+}
+
+.social-info button {
+  color: #232224;
+  background-color: #00BFFF;
+  padding: 14px 28px;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+  border-radius: 25px;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .social {
+    flex-direction: column;
+  }
+  .social img {
+    max-width: 740px;
+  }
+}
+.doacao {
+  background-color: #fff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.doacao-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.doacao-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.campanhas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  padding: 0 44px 34px 44px;
+}
+
+.doar-imagem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.doar-imagem img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.25s;
+}
+
+.doar-imagem img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.doar-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+  flex-direction: column;
+}
+
+.doar-info button {
+  color: #232224;
+  background-color: #00BFFF;
+  padding: 14px 28px;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+  border-radius: 25px;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .campanhas {
+    flex-direction: column;
+  }
+  .campanhas img {
+    max-width: 740px;
+  }
+}
+.iniciacao {
+  background-color: #fefbff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.iniciacao-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.iniciacao-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.iniciacao-crista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  padding: 0 44px 34px 44px;
+}
+
+.iniciacao-imagem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.iniciacao-imagem img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.25s;
+}
+
+.iniciacao-imagem img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.iniciacao-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+  flex-direction: column;
+}
+
+.iniciacao-info button {
+  color: #232224;
+  background-color: #00BFFF;
+  padding: 14px 28px;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.button-iniciacao {
+  padding: 14px 28px;
+  color: #232224;
+  background-color: #00BFFF;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+  border-radius: 25px;
+  opacity: 0.9;
+}
+
+.button-iniciacao:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+@media screen and (max-width: 768px) {
+  .iniciacao-crista {
+    flex-direction: column;
+  }
+  .iniciacao-crista img {
+    max-width: 740px;
+  }
+}
+.secretaria {
+  background-color: #fff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.secretaria-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.secretaria-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.informativos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  padding: 0 44px 34px 44px;
+}
+
+.secretaria-imagem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.secretaria-imagem img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.25s;
+}
+
+.secretaria-imagem img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.secretaria-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+  flex-direction: column;
+}
+
+.secretaria-info button {
+  color: #232224;
+  background-color: #00BFFF;
+  padding: 14px 28px;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.button-secretaria {
+  padding: 14px 28px;
+  color: #232224;
+  background-color: #00BFFF;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.button-secretaria:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+@media screen and (max-width: 768px) {
+  .informativos {
+    flex-direction: column;
+  }
+  .informativos img {
+    max-width: 740px;
+  }
+}
+.secretaria-imagem img:not(:nth-child(n+1):nth-child(-n+3)) {
+  display: none;
+}
+
+#img-dizimo {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  opacity: 0.8;
+}
+
+#img-qrcode {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+#fade-doacoes,
+#fade-confissoes,
+#fade-secretaria2,
+#fade-contato,
+#fade-missas,
+#fade-homilia,
+#fade-liturgiadiaria,
+#fade-santos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+#modal-confissoes,
+#modal-secretaria2,
+#modal-contato,
+#modal-missas {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  max-width: 85%;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 1000;
+}
+
+#modal-homilia,
+#modal-liturgiadiaria,
+#modal-santos {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1280px;
+  max-width: 85%;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 1000;
+}
+
+#modal-doacoes {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 90%;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 1000;
+}
+
+#fade-doacoes,
+#fade-confissoes,
+#fade-secretaria2,
+#fade-contato,
+#fade-missas,
+#fade-homilia,
+#fade-liturgiadiaria,
+#fade-santos #modal-doacoes,
+#modal-confissoes,
+#modal-secretaria2,
+#modal-contato,
+#modal-missas,
+#modal-homilia,
+#modal-liturgiadiaria,
+#modal-santos {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-header-doacoes,
+.modal-header-confissoes,
+.modal-header-secretaria2,
+.modal-header-contato,
+.modal-header-missas,
+.modal-header-homilia,
+.modal-header-liturgiadiaria,
+.modal-header-santos,
+.modal-body-confissoes,
+.modal-body-contato,
+.modal-body-missas,
+.modal-body-homilia,
+.modal-body-liturgiadiaria,
+.modal-body-santos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.modal-body-secretaria2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  flex-direction: column;
+}
+
+.modal-body-confissoes p,
+.modal-body-secretaria2 p,
+.modal-body-contato p,
+.modal-body-missas p,
+.modal-body-homilia p,
+.modal-body-liturgiadiaria p,
+.modal-body-santos p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.modal-body-doacoes p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 40px;
+}
+
+.modal-body-confissoes strong,
+.modal-body-secretaria2 strong,
+.modal-body-contato strong,
+.modal-body-missas strong,
+.modal-body-homilia strong,
+.modal-body-liturgiadiaria strong,
+.modal-body-santos strong {
+  margin-right: 10px;
+}
+
+.modal-body-doacoes strong {
+  align-self: flex-start;
+  margin-right: 10px;
+  line-height: 1px;
+}
+
+#modal-doacoes.hide,
+#fade-doacoes.hide,
+#modal-confissoes.hide,
+#fade-confissoes.hide,
+#modal-secretaria2.hide,
+#fade-secretaria2.hide,
+#modal-contato.hide,
+#fade-contato.hide,
+#modal-missas.hide,
+#fade-missas.hide,
+#modal-homilia.hide,
+#fade-homilia.hide,
+#modal-liturgiadiaria.hide,
+#fade-liturgiadiaria.hide,
+#modal-santos.hide,
+#fade-santos {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal-doacoes.hide,
+#modal-confissoes.hide,
+#modal-secretaria2.hide,
+#modal-contato.hide,
+#modal-missas.hide,
+#modal-homilia.hide,
+#modal-liturgiadiaria.hide,
+#modal-santos.hide {
+  top: 0;
+}
+
+.modal-header-doacoes button,
+.modal-header-confissoes button,
+.modal-header-secretaria2 button,
+.modal-header-contato button,
+.modal-header-missas button,
+.modal-header-homilia button,
+.modal-header-liturgiadiaria button,
+.modal-header-santos button {
+  padding: 14px 28px;
+  color: #232224;
+  background-color: #00BFFF;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 1px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-header-doacoes button:hover,
+.modal-header-confissoes button:hover,
+.modal-header-secretaria2 button:hover,
+.modal-header-contato button:hover,
+.modal-header-missas button:hover,
+.modal-header-homilia button:hover,
+.modal-header-liturgiadiaria button:hover,
+.modal-header-santos button:hover {
+  background-color: #0099cc;
+}
+
+.button-doacoes,
+.button-confissoes,
+.button-secretaria2,
+.button-contato,
+.button-missas,
+.button-homilia,
+.button-liturgiadiaria,
+.button-santos {
+  padding: 14px 28px;
+  color: #232224;
+  background-color: #00BFFF;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+  border-radius: 25px;
+  opacity: 0.9;
+}
+
+.button-doacoes:hover,
+.button-confissoes:hover,
+.button-secretaria2:hover,
+.button-contato:hover,
+.button-missas:hover,
+.button-homilia:hover,
+.button-liturgiadiaria:hover,
+.button-santos:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+#copy-button {
+  display: block;
+  margin: 0 auto;
+  padding: 7px 16px;
+  background-color: #00BFFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#copy-button:hover {
+  background-color: #00BFFF;
+}
+
+.copy-success-msg {
+  display: block;
+  color: #008000;
+  font-weight: bold;
+}
+
+.copy-success-msg.hide {
+  display: none;
+}
+
+.whatsapp-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #25d366;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.whatsapp-button:hover {
+  background-color: #128c7e;
+}
+
+.texto-mapa {
+  background-color: #fff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+.texto-mapa h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  color: #fff;
+}
+.footer img {
+  width: 50px;
+  height: auto;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 25px;
+  color: #fff;
+}
+
+.footer-icons a {
+  font-size: 20px;
+}
+
+.footer-icons a:hover i {
+  color: #d34040;
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(8px) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.btn-whatsapp {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  z-index: 99;
+}
+.btn-whatsapp img {
+  max-width: 74px;
+  transition: transform 0.4s;
+}
+.btn-whatsapp img:hover {
+  transform: scale(1.1);
+}
+
+.btn-whatsapp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 8px;
+  left: -150px;
+  padding: 6px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #232224;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-whatsapp img {
+    max-width: 64px;
+  }
+}
+body {
+  font-family: "Sora", sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #06121e;
+}
+
+button {
+  font-family: "Sora", sans-serif;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

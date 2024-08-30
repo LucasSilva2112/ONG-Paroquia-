@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/img-brasao.png">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<title>Paróquia Nossa Senhora de Fátima</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="bg-home" id="inicio">
+      <header>
+          <nav class="navbar" id="nav">
+            <a href="#inicio" id="logo">
+              <img src="assets/img-brasao.png" alt="Ícone">
+            </a>
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false"><span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+              <li><a href="#horarios">Horários</a></li>
+              <li><a href="#liturgia">Liturgia</a></li>
+              <li><a href="#social">Social</a></li>
+              <li><a href="#doações">Doações e Campanhas</a></li>
+              <li><a href="#iniciação">Iniciação Cristã</a></li>
+              <li><a href="#secretaria">Secretaria</a></li>
+              <li><a href="https://www.facebook.com/ParNrsadeFatima/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCHHcsOETdqCtYk2eAtWUHKQ" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+              <li><a href="https://www.instagram.com/paroquia.nsfatima/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://wa.me/5511992845846" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+              
+
+            </ul>
+          </nav>
+          
+          <div class="header-logo" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/img-brasao.png" alt="Logo da paroquia" data-aos="flip-up" data-aos-delay="300" data-aos-duration="1500"/>
+            <p>Paróquia Nossa Senhora de Fátima</p>
+          </div>
+  
+        <main class="hero container" data-aos="fade-up" data-aos-delay="400">
+          <h1>SEJAM BEM-VINDOS</h1>
+          <p>Aqui você encontrará informações importantes para a sua vida de Fé e em Comunidade.
+          </p>
+        </main>
+  
+      </header>
+  
+    </div>
+  
+    <!-- SOBRE -->
+    <section class="about" id="sobre">
+      <div class="container about-content">
+          <img src="assets/img-sobre.png" alt="Imagem sobre a paroquia"/>
+      <div class="about-description">
+        <h2>Sobre</h2>
+          <P>A Paróquia Nossa Senhora de Fátima foi fundada no dia 08 de Dezembro de 1977 e pertence à Diocese de Bragança Paulista.</P>
+          <p>Pároco - Pe. Diogo Rodrigues dos Santos Albuquerque</p>
+          
+        </div>
+        </div>
+    </section>
+
+    <!-- BANNER -->
+    <section class="banner">
+  <div class="container liturgico-content">
+    <h2></h2>
+    <p></p>
+  </div>
+
+  <section class="banner-site">
+    <div class="banner-imagem">
+      <img class="desktop-image" src="assets/trezena-banner.png" alt="trezena-desktop">
+      <img class="mobile-image" src="assets/trezena-mobile.png" alt="trezena-mobile">
+    </div>  
+</section>
+    </section>
+
+    <!-- HORÁRIOS -->
+    <section class="horario" id="horarios">
+      <div class="container horario-content">
+        <h2>Horários</h2>
+        <p>Aqui você encontrará todos os horarios da Nossa Paróquia e das nossas Capelas.</p>
+      </div>
+
+      <section class="horariosgeral">
+      <!-- ITEM 01 -->
+      <div class="horarios-imagem" data-aos="fade-up" data-aos-delay="150">
+      <img src="assets/img-missas_v2.png" alt="missas">
+      <div class="horarios-info">
+        <button class="button-secretaria open-modal-missas">Horários</button>
+    </div>
+    </div>
+      <!-- ITEM 02 -->
+      <div class="horarios-imagem" data-aos="fade-up" data-aos-delay="150">
+      <img src="assets/img-confissoes.png" alt="confissoes">
+      <div class="horarios-info">
+        <button class="button-secretaria open-modal-confissoes">Horários</button>
+    </div>
+    </div>
+      <!-- ITEM 03 -->
+      <div class="horarios-imagem" data-aos="fade-up" data-aos-delay="150">
+      <img src="assets/img-secretaria_v2.png" alt="contato">
+      <div class="horarios-info">
+        <button class="button-secretaria3 open-modal-contato">Contatos</button>
+    </div>
+    </div>
+
+    </section>
+
+          <!-- MODAL MISSAS -->
+          <div id="fade-missas" class="hide"></div>
+          <div id="modal-missas" class="hide">
+          <div class="modal-header-missas">
+            <h3 class="h2">Os dias e horários das Santas Missas, em nossa Paróquia, são:</h3>
+            <button id="close-modal-missas">Fechar</button>
+          </div>
+          <div class="modal-body-missas">
+            <p><strong>Sábados:  (Igreja Matriz - Vila Ramos) </strong> 🕰️18:00
+            <strong>Domingos:  (Capela Santo Antônio - Parque Vitória) </strong> 🕰️7:30
+            <strong>Domingos:  (Capela São Jõao Batista - Pouso Alegre) </strong> 🕰️10:30
+            <strong>Domingos:  (Igreja Matriz - Vila Ramos) </strong> 🕰️17:00
+            </p>
+          </div>
+          </div>
+          
+          <!-- MODAL CONFISSÕES -->
+          <div id="fade-confissoes" class="hide"></div>
+          <div id="modal-confissoes" class="hide">
+          <div class="modal-header-confissoes">
+            <h3 class="h2">Os dias e horários do atendimento de Confissões são:</h3>
+            <button id="close-modal-confissoes">Fechar</button>
+          </div>
+          <div class="modal-body-confissoes">
+            <p><strong>Quintas e Sextas-feiras:</strong> 15:00 às 17:00
+            <strong>Sábados:</strong> 11:00 às 12:00
+            <strong>Local:</strong> Igreja Matriz
+            </p>
+          </div>
+          </div>
+
+          <!-- MODAL FALE CONOSCO -->
+          <div id="fade-contato" class="hide"></div>
+          <div id="modal-contato" class="hide">
+          <div class="modal-header-contato">
+            <h3 class="h2">Fale conosco através dos meios de contato: </h3>
+            <button id="close-modal-contato">Fechar</button>
+          </div>
+          <div class="modal-body-contato">
+            <p><strong>Horários de atendimento:</strong>
+            <strong><em>Segunda á Sexta-feira</em></strong> 08:00 ás 12:00 - 13:00 ás 17:00
+            <strong><em>Sábados</em></strong> 08:00 ás 12:00
+            <stong>---------------------------------</stong>
+            <strong>Email: </strong>  pnsfvilaramos@gmail.com
+            <strong>WhatsApp: </strong> <a href="https://wa.me/5511992845846" target="_blank">📱 (11)99284-5846</a>
+      
+            </p>
+          </div>
+          </div>
+    </section>
+
+    <!-- LITURGIA -->
+    <section class="liturgico" id="liturgia">
+      <div class="container liturgico-content">
+        <h2>Liturgia</h2>
+        <p>Leia e faça a sua Oração com as Leituras e com o Evangelho do dia!</p>
+      </div>
+      
+    
+      <section class="liturgia">
+        <!-- ITEM 01 -->
+        <div class="liturgia-imagem" data-aos="fade-up" data-aos-delay="150" id="imagem-homilia">
+          <img src="assets/img-homilia.png" alt="homilia"/>
+          <div class="liturgia-info">
+            <button class="button-homilia open-modal-homilia">Homilia Diária</button>
+        </div>
+        </div>
+  
+        <!-- ITEM 02 -->
+        <div class="liturgia-imagem" data-aos="fade-up" data-aos-delay="250" id="imagem-liturgiadiaria">
+          <img src="assets/img-liturgiadiaria.png" alt="liturgiadiaria"/></a>
+          <div class="liturgia-info">
+            <button class="button-liturgiadiaria open-modal-liturgiadiaria">Liturgia Diária</button>
+        </div>
+        </div>
+        <!-- ITEM 03 -->
+        <div class="liturgia-imagem" data-aos="fade-up" data-aos-delay="400" id="imagem-santos">
+          <img src="assets/img-santos.png"alt="santos"/></a>
+          <div class="liturgia-info">
+            <button class="button-santos open-modal-santos">Santo do dia</button>
+        </div>
+        </div>
+    
+      </section>
+  
+      <!-- MODAIS LITURGIA -->
+  
+      <!-- MODAL HOMILIA -->
+          <div id="fade-homilia" class="hide"></div>
+          <div id="modal-homilia" class="hide">
+          <div class="modal-header-homilia">
+              <h3 class="h2">Homilia diária</h3>
+              <button id="close-modal-homilia">Fechar</button>
+          </div>
+              <div class="modal-body-homilia">
+              <iframe src="https://homilia.cancaonova.com/pb/" frameborder="0" width="100%" height="400px"></iframe>
+          </div>
+          </div>
+  
+          <div id="fade-liturgiadiaria" class="hide"></div>
+          <div id="modal-liturgiadiaria" class="hide">
+          <div class="modal-header-liturgiadiaria">
+            <h3 class="h2">Liturgia Diária</h3>
+            <button id="close-modal-liturgiadiaria">Fechar</button>
+          </div>
+              <div class="modal-body-liturgiadiaria">
+              <iframe src="https://liturgia.cancaonova.com/pb/" frameborder="0" width="100%" height="400px"></iframe>
+          </div>
+          </div>
+  
+          <div id="fade-santos" class="hide"></div>
+          <div id="modal-santos" class="hide">
+          <div class="modal-header-santos">
+            <h3 class="h2">Santos do Dia</h3>
+            <button id="close-modal-santos">Fechar</button>
+          </div>
+              <div class="modal-body-santos">
+              <iframe src="https://santo.cancaonova.com/" frameborder="0" width="100%" height="400px"></iframe>
+  
+          </div>
+          </div>
+  
+    </section>
+
+    <!-- SOCIAL -->
+    <section class="midia" id="social">
+      <div class="container midia-content">
+        <h2>SOCIAL</S></h2>
+        <p>Acompanhe a Pároquia e o Nosso querido Pároco<p>
+      </div>
+  
+    <section class="social">
+      <!-- ITEM 01 -->
+      <div class="social-imagem">
+        <a href="https://open.spotify.com/intl-pt/artist/0qDsevmatzNXsSGjnN0g7b?autoplay=true" target="_blank">
+        <img src="assets/img-spotify.jpg" alt="Spotify"/></a>
+      <div class="social-info">
+        <strong>Spotify</strong>
+      </div>
+      </div>
+      <!-- ITEM 02 -->
+      <div class="social-imagem">
+        <a href="https://www.instagram.com/paroquia.nsfatima?igsh=bndsOXo5YnZobW80" target="_blank">
+        <img src="assets/img-instagram.png" alt="Instagram"/></a>
+      <div class="social-info">
+        <strong>Instagram</strong>
+      </div>
+      </div>
+      <!-- ITEM 03 -->
+      <div class="social-imagem">
+        <a href="https://www.youtube.com/@nossasenhoradefatima1977" target="_blank">
+        <img src="assets/img-youtube-paroquia.png" alt="Youtube"/></a>
+      <div class="social-info">
+        <strong>Youtube</strong>
+      </div>
+      </div>
+  
+    </section>
+    </section>
+
+    <!-- DOAÇÃO -->
+    <section class="doacao" id="doações">
+      <div class="container doacao-content">
+        <h2>Doações e Campanhas</h2>
+        <p>Ajude a nossa Paróquia com o seu algo a mais. Contamos com você, para darmos continuidade nos trabalhos de Evangelização e em nossa estrutura paroquial.</p>
+      </div>
+            
+    <section class="campanhas">
+      <!-- ITEM 01 -->
+      <div class="doar-imagem" data-aos="fade-up" data-aos-delay="150">
+        <img src="assets/img-oferta.jpg" alt="Dizimo" />
+      <div class="doar-info">
+        <button class="button-doacoes open-modal-doacoes">Doar</button>
+      </div>
+      </div>
+      <!-- ITEM 02 -->
+      <div class="doar-imagem" data-aos="fade-up" data-aos-delay="150">
+        <img src="assets/img-solidaria.png" alt="campanha-solidaria" />
+      <div class="doar-info">
+        <a href="https://wa.me/5511992845846?text=Ol%C3%A1%2C+Salve+Maria%21+Gostaria+de+participar+da+campanha+solid%C3%A1ria." class="button-doacoes" target="_blank">Saiba mais</a>
+      </div>
+      </div>
+      <!-- ITEM 03   -->
+      <div class="doar-imagem" data-aos="fade-up" data-aos-delay="150">
+        <img src="assets/img-obra.jpg" alt="Obra" />
+      <div class="doar-info">
+        <button class="button-doacoes open-modal-doacoes">Doar</button>
+      </div>
+      </div>
+
+    </section>
+      <!-- MODAL CAMPANHA -->
+      <div id="fade-doacoes" class="hide"></div>
+      <div id="modal-doacoes" class="hide">
+      <div class="modal-header-doacoes">
+        <h2></h2>
+        <button id="close-modal-doacoes">Fechar</button>
+      </div>
+      <div class="modal-body-doacoes">
+        <strong>Se preferir, pague com a chave Pix: </strong>
+          <p id="copy-text">45.613.668/0023-58</p>
+        <button id="copy-button">COPIAR CHAVE</button>
+          <p class="copy-success-msg hide">Texto copiado com sucesso!</p>
+          <p>
+            <img src="assets/img-qrcode.png" alt="qrcode" id="img-qrcode">
+          </p>
+      </div>
+      </div>
+    </section>        
+
+    <!-- INICIAÇÃO CRISTÃ -->
+    <section class="iniciacao" id="iniciação">
+      <div class="container iniciacao-content">
+        <h2>Iniciação Cristã</h2>
+        <p>O Catecismo da Igreja Católica, no Parágrafo 1212, nos ensina que:  "Através dos sacramentos da iniciação cristã – Batismo, Confirmação e Eucaristia são lançados os alicerces de toda a vida cristã."</p>
+      </div>
+  
+    <section class="iniciacao-crista">
+      <!-- ITEM 01 -->
+      <div class="iniciacao-imagem">
+        <img src="assets/img-batismo.png" alt="batismo"/>
+      <div class="iniciacao-info">
+        <strong>Batismo</strong>
+        <p>Os Batismos, em nossa Paróquia, são realizados no 4° Domingo de cada mês. A ficha de inscrição está disponível na secretaria paroquial</p>
+          <a href="https://wa.me/5511992845846?text=Ol%C3%A1%2C+Salve+Maria%21+Gostaria+de+solicitar+a+ficha+de+inscri%C3%A7%C3%A3o+para+o+Sacramento+do+Batismo." class="button-iniciacao" target="_blank">Inscrever-se</a>
+      </div> 
+      </div>
+      <!-- ITEM 02 -->
+      <div class="iniciacao-imagem">
+        <img src="assets/img-comunhao.png" alt="iniciacao"/>
+      <div class="iniciacao-info">
+        <strong>Eucaristia</strong>
+        <p>Temos turmas para a Catequese de crianças a partir de 9 anos de idade e para os adultos que ainda não receberam a 1° Eucaristia.</p>
+        <a href="https://wa.me/5511992845846?text=Ol%C3%A1%2C+Salve+Maria%21+Gostaria+de+solicitar+a+ficha+de+inscri%C3%A7%C3%A3o+para+o+Sacramento+da+Crisma." class="button-iniciacao" target="_blank">Inscrever-se</a>
+      </div>
+      </div>
+      <!-- ITEM 03 -->
+      <div class="iniciacao-imagem">
+        <img src="assets/img-crisma.png" alt="iniciacao"/>
+      <div class="iniciacao-info">
+        <strong>Crisma</strong>
+        <p> Temos turmas para os adolescentes a partir dos 14 anos de idade e para os adultos que ainda não são Crismados.</p>
+        <a href="https://wa.me/5511992845846?text=Ol%C3%A1%2C+Salve+Maria%21+Gostaria+de+solicitar+a+ficha+de+inscri%C3%A7%C3%A3o+para+o+Sacramento+da+Eucaristia." class="button-iniciacao" target="_blank">Inscrever-se</a>
+      </div>
+      </div>
+    </section>
+    </section>
+
+    <!-- SECRETARIA -->
+    <section class="secretaria" id="secretaria">
+      <div class="container secretaria-content">
+        <h2>Secretaria Paroquial</h2>
+        <p>Sobre qual dos assuntos abaixo você deseja falar conosco? Clique no ícone e entre em contato através do nosso WhatsApp. Estamos prontos para atendê-los. </p>
+      </div>
+    
+    <section class="informativos">
+      <!-- ITEM 01 -->
+      <div class="secretaria-imagem">
+        <img src="assets/img-dizimo.png"alt="secretaria"/>
+        <div class="secretaria-info">
+          <button class="button-secretaria2 open-modal-secretaria2">Saiba mais</button>
+        </div>
+      </div>
+      <!-- ITEM 02 -->
+      <div class="secretaria-imagem">
+        <img src="assets/img-campanha-noivos.png" alt="Matrimonio"/>
+        <div class="secretaria-info">
+          <a href="https://wa.me/5511992845846?text=Ol%C3%A1%2C+Salve+Maria%21+Gostaria+de+solicitar+a+ficha+de+inscri%C3%A7%C3%A3o+para+o+Sacramento+do+Matrimônio." class="button-iniciacao" target="_blank">
+          <i class="fab fa-whatsapp"></i> Fale conosco</a>
+        </div>
+        </div>
+      <!-- ITEM 03 -->
+      <div class="secretaria-imagem">
+        <img src="assets/img-documentos.png"alt="secretaria"/>
+        <div class="secretaria-info">
+          <a href="https://wa.me/5511992845846?text=Ol%C3%A1%2C+Salve+Maria%21+Gostaria+de+solicitar+documenta%C3%A7%C3%B5es+junto+%C3%A1+secretaria." class="button-iniciacao" target="_blank">
+          <i class="fab fa-whatsapp"></i> Solicitar</a>          
+        </div>
+        </div>
+
+    </section>
+
+      <!-- MODAL DIZIMO -->
+      <div id="fade-secretaria2" class="hide"></div>
+      <div id="modal-secretaria2" class="hide">
+      <div class="modal-header-secretaria2">
+        <h3 class="h2">Seja um(a) Dizimista</h3>
+        <button id="close-modal-secretaria2">Fechar</button>
+      </div>
+      <div class="modal-body-secretaria2">
+        <p>“O dízimo é uma contribuição sistemática e periódica dos fiéis, por meio da qual cada comunidade assume, corresponsavelmente, sua sustentação e a da Igreja. Ele pressupõe pessoas evangelizadas e comprometidas com a evangelização.” (CNBB, Doc. 106, n.6).</p>
+        <p>
+        <img src="assets/img-modal-dizimo.jpg" alt="dizimo" id="img-dizimo">
+        </p>
+        <a href="https://wa.me/5511992845846?text=Ol%C3%A1%2C+Salve+Maria%21+Quero+ser+um%28a%29+Dizimista%21" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i> Tire suas dúvidas pelo WhatsApp</a>
+      </div>
+      </div>
+      </div>
+    </section>
+  
+    <!-- LOCALIZAÇÃO -->
+      <div class="texto-mapa">
+        <h2>Venha nos conhecer</h2>
+      </div>
+
+    <!-- MAPA-LOCALIZAÇÃO -->
+    <iframe width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58623.24631524234!2d-46.738243402658576!3d-23.317467819534308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cee5b2d8981b4f%3A0xd106ce455dc110b6!2sPar%C3%B3quia%20Nossa%20Senhora%20F%C3%A1tima!5e0!3m2!1spt-BR!2sbr!4v1708709208621!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+    <div>
+      <img src="assets/img-brasao.png" alt="Logo paroquia"/>
+    </div>
+    <!-- ICONES(REDES SOCIAIS) DO RODAPÉ -->
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/ParNrsadeFatima/"><i class="fab fa-facebook-f"></i></a></li>
+      <a href="https://www.instagram.com/paroquia.nsfatima/"><i class="fab fa-instagram"></i></a></li>
+      <a href="https://www.youtube.com/channel/UCHHcsOETdqCtYk2eAtWUHKQ"><i class="fa-brands fa-youtube"></i></a></li>
+    </div>
+    <!-- TEXTO FINAL DO RODAPÉ -->
+      <p><span>&copy</span> 2024 | Paróquia Nossa Senhora de Fátima - Todos direitos reservados.</p>
+    </footer>
+
+    <!--BOTÃO WHATSAPP-->
+    <a href="https://wa.me/5511992845846" class="btn-whatsapp" target="_blank" data-aos="zoom-in-up" data-aos-delay="400">
+      <img src="assets/img-whatsapp.svg" alt="Botao whatsapp"/>
+      <span class="tooltip-text">Fale conosco</span>
+    </a>
+  
+  
+  <script src="script.js"></script>
+  </body>
+  </html>
+  
